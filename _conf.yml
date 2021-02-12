@@ -4,3 +4,7 @@ InfluxDB:
   username: user
   password: pass
   database: db
+FTP:
+  host: hostname
+  user: user
+  passwd: passwd
