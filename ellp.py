@@ -48,9 +48,9 @@ def elcsv_lp_generator(csvfile: str) -> Iterator[List[Dict[str, Any]]]:
         for record in reader:
             record = list_val_type_conv(record)
             ch_total = 0
-            for i in record[1:]:
-                if (type(i) == float) and (i != np.nan):
-                    ch_total += i
+            for num in record[1:]:
+                if (type(num) is float) or (type(num) is int) and (num != np.nan):
+                    ch_total += num
             record.append(ch_total)
             line_protocol = [{
                 'measurement': 'echonet',
