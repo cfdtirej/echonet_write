@@ -33,7 +33,7 @@ def list_val_type_conv(data: List[str]) -> List[Any]:
                 except ValueError:
                     result.append(value)
             elif value == '':
-                result.append(np.nan)
+                result.append(None)
             else:
                 pass
     return result
